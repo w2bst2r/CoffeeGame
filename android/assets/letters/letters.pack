@@ -1,0 +1,187 @@
+
+letters.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+l
+  rotate: false
+  xy: 1, 793
+  size: 130, 130
+  orig: 130, 130
+  offset: 0, 0
+  index: -1
+m
+  rotate: false
+  xy: 1, 661
+  size: 130, 130
+  orig: 130, 130
+  offset: 0, 0
+  index: -1
+r
+  rotate: false
+  xy: 133, 793
+  size: 130, 130
+  orig: 130, 130
+  offset: 0, 0
+  index: -1
+j
+  rotate: false
+  xy: 1, 529
+  size: 130, 130
+  orig: 130, 130
+  offset: 0, 0
+  index: -1
+k
+  rotate: false
+  xy: 133, 661
+  size: 130, 130
+  orig: 130, 130
+  offset: 0, 0
+  index: -1
+d
+  rotate: false
+  xy: 265, 793
+  size: 130, 130
+  orig: 130, 130
+  offset: 0, 0
+  index: -1
+f
+  rotate: false
+  xy: 1, 397
+  size: 130, 130
+  orig: 130, 130
+  offset: 0, 0
+  index: -1
+a
+  rotate: false
+  xy: 133, 529
+  size: 130, 130
+  orig: 130, 130
+  offset: 0, 0
+  index: -1
+n
+  rotate: false
+  xy: 265, 661
+  size: 130, 130
+  orig: 130, 130
+  offset: 0, 0
+  index: -1
+w
+  rotate: false
+  xy: 397, 793
+  size: 130, 130
+  orig: 130, 130
+  offset: 0, 0
+  index: -1
+z
+  rotate: false
+  xy: 1, 265
+  size: 130, 130
+  orig: 130, 130
+  offset: 0, 0
+  index: -1
+u
+  rotate: false
+  xy: 133, 397
+  size: 130, 130
+  orig: 130, 130
+  offset: 0, 0
+  index: -1
+o
+  rotate: false
+  xy: 265, 529
+  size: 130, 130
+  orig: 130, 130
+  offset: 0, 0
+  index: -1
+g
+  rotate: false
+  xy: 397, 661
+  size: 130, 130
+  orig: 130, 130
+  offset: 0, 0
+  index: -1
+s
+  rotate: false
+  xy: 529, 793
+  size: 130, 130
+  orig: 130, 130
+  offset: 0, 0
+  index: -1
+e
+  rotate: false
+  xy: 1, 133
+  size: 130, 130
+  orig: 130, 130
+  offset: 0, 0
+  index: -1
+y
+  rotate: false
+  xy: 133, 265
+  size: 130, 130
+  orig: 130, 130
+  offset: 0, 0
+  index: -1
+p
+  rotate: false
+  xy: 265, 397
+  size: 130, 130
+  orig: 130, 130
+  offset: 0, 0
+  index: -1
+b
+  rotate: false
+  xy: 397, 529
+  size: 130, 130
+  orig: 130, 130
+  offset: 0, 0
+  index: -1
+q
+  rotate: false
+  xy: 529, 661
+  size: 130, 130
+  orig: 130, 130
+  offset: 0, 0
+  index: -1
+i
+  rotate: false
+  xy: 661, 793
+  size: 130, 130
+  orig: 130, 130
+  offset: 0, 0
+  index: -1
+h
+  rotate: false
+  xy: 1, 1
+  size: 130, 130
+  orig: 130, 130
+  offset: 0, 0
+  index: -1
+t
+  rotate: false
+  xy: 133, 133
+  size: 130, 130
+  orig: 130, 130
+  offset: 0, 0
+  index: -1
+x
+  rotate: false
+  xy: 265, 265
+  size: 130, 130
+  orig: 130, 130
+  offset: 0, 0
+  index: -1
+v
+  rotate: false
+  xy: 397, 397
+  size: 130, 130
+  orig: 130, 130
+  offset: 0, 0
+  index: -1
+c
+  rotate: false
+  xy: 529, 529
+  size: 130, 130
+  orig: 130, 130
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,2 @@
+include ':gdx-sqlite'
+include 'desktop', 'android', 'ios', 'html', 'core'
