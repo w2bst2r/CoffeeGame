@@ -1,0 +1,257 @@
+\documentclass[12pt,a4paper]{article}
+
+% Türkçe %
+\usepackage[utf8]{inputenc} %Türkçe karakterler için
+\usepackage[T1]{fontenc}
+\renewcommand{\tablename}{Tablo}
+\renewcommand{\figurename}{Şekil}
+\renewcommand{\indexname}{Dizin}
+\renewcommand{\listfigurename}{Şekiller}
+\renewcommand{\listtablename}{Tablolar}
+\renewcommand{\contentsname}{İçindekiler}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+% Türkçe %
+
+\usepackage[section]{placeins}
+\usepackage{geometry}
+\usepackage{graphicx} %Resim koymak için
+\usepackage{times} %Times fontu
+\usepackage[nottoc]{tocbibind}
+\usepackage{url}
+\usepackage{array}
+\usepackage{tabu}
+
+\begin{document}
+   \pagenumbering{gobble}
+   \input{kapak.tex}
+   \newpage
+
+   \pagenumbering{roman}
+   \tableofcontents
+   \newpage
+
+   \pagenumbering{arabic}
+
+   \section{Giriş}
+   Bu belgenin amacı, Kahvaltı adlı oyun projesinin fonksiyonalitesini test etmek ve kararlılığını teyid etmektir.
+
+   \section{Kapsam}
+   Belgenin kapsamı uygulamanın fonksiyonalitesinin tamamıdır. Her fonksiyon bir bir ele alınmıştır.
+
+   \section{İlgili Belgeler}
+   Bu belge daha önce tarafınıza sunmuş olduğumuz sistem gereksinimleri belgesi (SRS) ile doğrudan bağlantılı olup yazılım proje yönetim planı belgesine (SPMP) de atıflar yapılmıştır.
+
+   \section{Takip Çizelgesi}\footnote{Bu bölümdeki gereksinimler yukarıda bahsi edilen SRS belgesinin 3.2.x bölümlerine tekabül etmektedir.}
+   \begin{tabular}{ | l | l | }
+   \hline
+   Gereksinim & İlişkili Test \\ \hline
+   \#1 & Test \#1 \\ \hline
+   \#2 & Test \#2 \\ \hline
+   \#3 & Test \#3 \\ \hline
+   \#4 & Test \#4 \\ \hline
+   \#5 & Test \#5 \\ \hline 
+   \#6 & Test \#6 \\ \hline
+   \#7 & Test \#7 \\ \hline
+   \#8 & Test \#8 \\ \hline
+   \end{tabular}
+
+   \section{Notlar} \label{notes}
+   Geliştirmiş olduğumuz proje, SPMP belgesinde belirtildiği üzere artımlı geliştirme yöntemine göre geliştirilmiştir. Bu nedenle yapılan testler her artımın sonunda gerçekleştirilmiş olup, aşağıda belirtildiği üzere \textit{başarılı} veya \textit{başarısız} olarak etiketlenmiştir. \textit{Başarılı} durumuna sahip testler, o artım esnasında yapılan test sonuçlarında gözlenen problemlerin çözüldüğünü ve son kullanıcıya sunulan uygulamada söz konusu problemlerin gözlenmeyeceğini, \textit{başarısız} durumuna sahip testler, o artım esnasında yapılan test sonucunda tespit edilip çözüme kavuşturulamayan problemlerin bulunduğu testleri göstermektedir.
+
+   \section{Test Senaryoları} \label{test}
+   Bu bölümde geliştirmiş olduğumuz oyunun gereksinimlere göre testleri ve bu testlerin açıklamaları bir tablo üzerinde gösterilmiştir.\footnote{Bu tablodaki test numaraları, belge içindeki \ref{test}.x bölümlerinde açıklanmış olan testlere tekabül etmektedir.}
+
+   \begin{center}
+      \begin{tabular}{ | l | l | l | l | }
+      \hline
+      Test \# & Testi Yapan & Tarih & Başarı Durumu \\ \hline
+      1 & Abdullah AKALIN & 06.05.2017 & Başarısız \\ \hline
+      2 & Abdullah AKALIN & 02.05.2017 & Başarılı \\ \hline
+      3 & Muhammed Emre EMRAH & 18.05.2017 & Başarılı \\ \hline
+      4 & Muhammed Emre EMRAH ve Karim EL GUERMAI & 25.05.2017 & Başarılı \\ \hline
+      5 & Abdullah AKALIN & 18.05.2017 & Başarılı \\ \hline
+      6 & Muhammed Emre EMRAH & 25.05.2017 & Başarılı \\ \hline
+      7 & Bekir AYDIN & 18.05.2017 & Başarılı \\ \hline
+      8 & Karim EL GUERMAI & 15.05.2017 & Başarılı \\ \hline
+      \end{tabular}
+   \end{center}
+
+   \subsection{Test Elemanı: Giriş Ekranı}
+   \textit{Kapsam:} Oyuncunun ekrandaki düğmeye bastığında oyunun başlaması. \newline
+   \textit{Fiil:} Düğmeye dokunmak. \newline
+   \textit{Ön Koşullar:} Oyununun açık olması. \newline
+
+   \textit{Senaryo 1:} Menü ekranındayken ekranın kilitlenmesi. \newline
+
+   \begin{center}
+      \begin{tabular}{ | l | p{3cm} | p{3cm} | p{3cm} | p{5cm} | }
+      \hline
+      Test \# & Fiil & Girdi & Beklenen Durum & Gerçekleşen Durum \\ \hline
+      1 & Ekranın kilidinin kapatılması ve tekrar açılması. & - & Bir değişikliğin olmaması. & Ekranın sol alt çeyrek kısımda çizilmesi. \\ \hline
+      \end{tabular}
+   \end{center}
+
+   \subsection{Test Elemanı: Merdiven Hareketleri}
+   \textit{Kapsam:} Oyuncunun ekranın sağ tarafına tıklamasıyla merdivenlerin aşağı inmesi, sol tarafına tıklayarak yukarı çıkması. \newline
+   \textit{Fiil:} Ekrana dokunmak. \newline
+   \textit{Ön Koşullar:} Oyununun başlamış olması. \newline
+
+   \textit{Senaryo 1:} Ekranın sağ-sol taraflarına tıklamak. \newline
+
+   \begin{center}
+      \begin{tabular}{ | l | p{3cm} | p{3cm} | p{3cm} | p{5cm} | }
+      \hline
+      Test \# & Fiil & Girdi & Beklenen Durum & Gerçekleşen Durum \\ \hline
+      1 & Ekranın sağ ve sol kısımlarına tıklamak.  & Dokunma hereketi. & Sağa tıklandığında merdivenlerin aşağı inmesi(dolayısıyla yukarı çıkıyor gibi görünmek), sola tıklandığında merdivenlerin aşağı inmesi. & Merdivenlerin kayması ve üst üste binmesi. \\ \hline
+      \end{tabular}
+   \end{center}
+
+   \subsection{Test Elemanı: Harflerin Toplanması}
+   \textit{Kapsam:} Kahve çekirdeğinin harflere çarpınca, eğer o harf ihtiyacı olan harfse onu devşirmesi. \newline
+   \textit{Fiil:} Kahve çekirdeğini merdivenlerden çıkararak harfle çarpışmak. \newline
+   \textit{Ön Koşullar:} Oyununun başlamış olması. \newline
+
+   \textit{Senaryo 1:} İhtiyacı olan harf ile (tamamlaması gereken kelime için gerekli olan sıradaki harf) çarpışmak. \newline
+
+   \begin{center}
+      \begin{tabular}{ | l | p{3cm} | p{3cm} | p{3cm} | p{5cm} | }
+      \hline
+      Test \# & Fiil & Girdi & Beklenen Durum & Gerçekleşen Durum \\ \hline
+      1 & Harf ile çarpışmak. & Ekrana dokunma hareketi. & Harfin alınması. & Harfin alınması. \\ \hline
+      2 & Harf ile çarpışmak. & Ekrana dokunma hareketi. & Harfin alınması. & Sıradaki harfin boşluk olması nedeniyle harfin alınamaması. \\ \hline
+      \end{tabular}
+   \end{center}
+
+   \textit{Senaryo 2:} İhtiyacı olmayan harf ile çarpışmak.
+
+   \begin{center}
+      \begin{tabular}{ | l | p{3cm} | p{3cm} | p{3cm} | p{5cm} | }
+      \hline
+      Test \# & Fiil & Girdi & Beklenen Durum & Gerçekleşen Durum \\ \hline
+      1 & Harf ile çarpışmak. & Ekrana dokunma hareketi. & Harfin alınmaması. & Harfin alınmaması. \\ \hline
+      \end{tabular}
+   \end{center}
+
+   \textit{Senaryo 3:} Alınan harfin harf tutucusunda birikmesi.
+
+   \begin{center}
+      \begin{tabular}{ | l | p{3cm} | p{3cm} | p{3cm} | p{5cm} | }
+      \hline
+      Test \# & Fiil & Girdi & Beklenen Durum & Gerçekleşen Durum \\ \hline
+      1 & Harf ile çarpışmak. & Ekrana dokunma hareketi. & Harfin harf tutucusuna eklenmesi & Harfin harf tutucusuna küçük harflerle yerleşmesi. \\ \hline
+      2 & harf ile çarpışmak. & Ekrana dokunma hareketi. & Harfin harf tutucusuna sola dayalı yerleşmesi. & Harfin harf tutucusunun ortasına yerleşmesi. \\ \hline
+      \end{tabular}
+   \end{center}
+
+   \subsection{Test Elemanı: Kahve Çekirdeği ile Şekerin Çarpışması}
+   \textit{Kapsam:} Kahve çekirdeğinin şekere çarpınca en son aldığı harfi düşürmesi ya da hiç harfi kalmamışsa oyunun bitmesi. \newline
+   \textit{Fiil:} Kahve çekirdeğininin şekerle çarpıştırılması. \newline
+   \textit{Ön Koşullar:} Oyununun başlamış olması ve sahnede şekerin belirmiş olması. \newline
+
+   \textit{Senaryo 1:} Kahve çekirdeğinin merdivenleri çıkarken şekerle çarpışması.
+
+   \begin{center}
+      \begin{tabular}{ | l | p{3cm} | p{3cm} | p{3cm} | p{5cm} | }
+      \hline
+      Test \# & Fiil & Girdi & Beklenen Durum & Gerçekleşen Durum \\ \hline
+      1 & Şeker ile çarpışmak. & Ekrana dokunma hareketi. & Bir harfin düşürülmesi. & Birden çok harfin düşmesi. \\ \hline
+      2 & Şeker ile çarpışmak. & Ekrana dokunma hareketi. & Oyunun sonlanması. & Oyunun sonlanması. \\ \hline
+      \end{tabular}
+   \end{center}
+
+   \textit{Senaryo 2:} Kahve çekirdeğinin merdivenleri inerken şekerle çarpışması.
+
+   \begin{center}
+      \begin{tabular}{ | l | p{3cm} | p{3cm} | p{3cm} | p{5cm} | }
+      \hline
+      Test \# & Fiil & Girdi & Beklenen Durum & Gerçekleşen Durum \\ \hline
+      1 & Şeker ile çarpışmak. & Ekrana dokunma hareketi. & Bir harfin düşürülmesi. & Birden çok harfin düşmesi. \\ \hline
+      2 & Şeker ile çarpışmak. & Ekrana dokunma hareketi. & Oyunun sonlanması. & Oyunun sonlanması. \\ \hline
+      \end{tabular}
+   \end{center}
+
+   \subsection{Test Elemanı: Bölüm Geçme}
+   \textit{Kapsam:} Bölümdeki kelime için gerekli harflerin toplanması durumunda sonraki kelimeye (aynı zamanda sonraki bölüme) geçilmesi. \newline
+   \textit{Fiil:} Gerekli olan son harfin toplanması. \newline
+   \textit{Ön Koşullar:} Oyununun başlamış olması ve bölümdeki kelime için gerekli harflerin sonuncusu hariç olmak üzere toplanmış olması. \newline
+
+   \textit{Senaryo 1:} Kahve çekirdeğinin sonuncu harfi toplaması.
+
+   \begin{center}
+      \begin{tabular}{ | l | p{3cm} | p{3cm} | p{3cm} | p{5cm} | }
+      \hline
+      Test \# & Fiil & Girdi & Beklenen Durum & Gerçekleşen Durum \\ \hline
+      1 & Harf ile çarpışmak. & Ekrana dokunma hareketi. & Harfin alınması ve bölümün geçilmesi. & Harfin alınması ve bölümün geçilmesi. \\ \hline
+      \end{tabular}
+   \end{center}
+
+   \subsection{Test Elemanı: Yanma ve Oyunun Bitmesi}
+   \textit{Kapsam:} Kahve çekirdeğinin kahve seline kapılması ve hiç harfi yokken şekerle çarpışması durumunda oyunu kaybetmesi. \newline
+   \textit{Fiil:} Kahve seline kapılmak veya şekerle çarpışmak. \newline
+   \textit{Ön Koşullar:} Oyununun başlamış olması, oyuncunun hiç harfinin olmaması veya kahve selinin çekirdeğin boyunu aşmış olması. \newline
+
+   \textit{Senaryo 1:} Kahve çekirdeğinin hiç harfi yokken şekerle çarpışması.
+
+   \begin{center}
+      \begin{tabular}{ | l | p{3cm} | p{3cm} | p{3cm} | p{5cm} | }
+      \hline
+      Test \# & Fiil & Girdi & Beklenen Durum & Gerçekleşen Durum \\ \hline
+      1 & Şekerle çarpışmak. & Ekrana dokunma hareketi. & Oyunun sonlanması. & Oyunun sonlanması. \\ \hline
+      \end{tabular}
+   \end{center}
+
+   \textit{Senaryo 2:} Kahve çekirdeğinin kahve seli altında kalması.
+
+   \begin{center}
+      \begin{tabular}{ | l | p{3cm} | p{3cm} | p{3cm} | p{5cm} | }
+      \hline
+      Test \# & Fiil & Girdi & Beklenen Durum & Gerçekleşen Durum \\ \hline
+      1 & Kahve selinin çekirdeğin boyunu aşması. & - & Oyunun sonlanması. & Kahve selinin çekirdeği henüz yutmadan oyunun sonlanması. \\ \hline
+      \end{tabular}
+   \end{center}
+
+   \subsection{Test Elemanı: Kafein Modu}
+   \textit{Kapsam:} Kafein göstergesine dokunulduğunda kafein modunun aktifleşmesi. \newline
+   \textit{Fiil:} Kafein göstergesine dokunmak. \newline
+   \textit{Ön Koşullar:} Oyununun başlamış olması ve kafein göstergesinde en az bir birimlik kafein bulunması. \newline
+
+   \textit{Senaryo 1:} Kafein göstergesine dokunulması.
+
+   \begin{center}
+      \begin{tabular}{ | l | p{3cm} | p{3cm} | p{3cm} | p{5cm} | }
+      \hline
+      Test \# & Fiil & Girdi & Beklenen Durum & Gerçekleşen Durum \\ \hline
+      1 & Göstergeye dokunmak. & Ekrana dokunma hareketi. & Kafein moduna geçilmesi ve kafein miktarının hızla azalması. & Kafein moduna geçilmesi ve kafein miktarının azalması ve bitince tekrar dolmaya başlaması. \\ \hline
+      \end{tabular}
+   \end{center}
+
+   \subsection{Test Elemanı: Skorların Gösterilmesi}
+   \textit{Kapsam:} Harf alımında ve kelime tamamlanmasında skorun artması ve oyun bitiminde yüksek skorla birlikte gösterilmesi. \newline
+   \textit{Fiil:} Harf almak, kelime tamamlamak ya da oyunu kaybetmek. \newline
+   \textit{Ön Koşullar:} Oyununun başlamış olması. \newline
+
+   \textit{Senaryo 1:} Harf almak.
+
+   \begin{center}
+      \begin{tabular}{ | l | p{3cm} | p{3cm} | p{3cm} | p{5cm} | }
+      \hline
+      Test \# & Fiil & Girdi & Beklenen Durum & Gerçekleşen Durum \\ \hline
+      1 & Harf almak. & Ekrana dokunma hareketi. & Puanın 1 artması. & Puanın 1 artması. \\ \hline
+      \end{tabular}
+   \end{center}
+
+   \textit{Senaryo 2:} Kelime tamamlama.
+
+   \begin{center}
+      \begin{tabular}{ | l | p{3cm} | p{3cm} | p{3cm} | p{5cm} | }
+      \hline
+      Test \# & Fiil & Girdi & Beklenen Durum & Gerçekleşen Durum \\ \hline
+      1 & Sonuncu harfi almak. & Ekrana dokunma hareketi. & Puanın 10 artması. & Puanın 11 artması. (Bu davranış tutarlıdır. Çünkü 10 puan kelime tamamlama ile +1 puan ise en son alınan harf ile gelecektir.)\\ \hline
+      \end{tabular}
+   \end{center}
+
+   \section{Sonuç}
+   Bu belgede projenin geliştirilmesi esnasında yapılan testler ve SRS belgesinde karşılık gelen gereksinimleri ele alınmıştır. Testlerin başarı durumları \ref{test}. bölümde belirtilmiştir. Ayrıca testlerin hangi şartlarda yapıldığı ve başarı durumlarının neleri belirttiği \ref{notes}. bölümde açıklığa kavuşturulmuştur.
+   
+\end{document}

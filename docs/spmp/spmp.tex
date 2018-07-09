@@ -1,0 +1,163 @@
+\documentclass[12pt,a4paper]{article}
+
+% Türkçe %
+\usepackage[utf8]{inputenc} %Türkçe karakterler için
+\usepackage[T1]{fontenc}
+\renewcommand{\tablename}{Tablo}
+\renewcommand{\figurename}{Şekil}
+\renewcommand{\indexname}{Dizin}
+\renewcommand{\listfigurename}{Şekiller}
+\renewcommand{\listtablename}{Tablolar}
+\renewcommand{\contentsname}{İçindekiler}
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+% Türkçe %
+
+\usepackage{geometry}
+\usepackage{graphicx} %Resim koymak için
+\usepackage{times} %Times fontu
+\usepackage[nottoc]{tocbibind}
+\usepackage{url}
+\usepackage{array}
+\usepackage{tabu}
+
+\begin{document}
+   \pagenumbering{gobble}
+   \input{kapak/kapak.tex}
+   \newpage
+
+   \section*{Revizyonlar}
+   \begin{center}
+      \begin{tabu} to 1.0\textwidth {| X[l] |  X[c] |  X[c] | X[c] |}
+      \hline
+      Revizyon & Tarih & Güncelleyen & Yorum \\[0.5ex]
+      \hline\hline
+      0.1 & 24.03.2017 & Abdullah Akalın & İlk revizyon. \\
+      \hline
+      \end{tabu}
+   \end{center}
+   \newpage
+
+
+   \pagenumbering{roman}
+   \tableofcontents
+   \newpage
+
+   \pagenumbering{arabic}
+
+   \section{GİRİŞ}
+   Bu bölümde belge için temel teşkil eden kısımlar sunulmuştur. Proje kısaca açıklanmış ve proje çıktıları belirtilmiştir.
+
+   \subsection{Projeye Genel Bakış}
+   Bu proje bir mobil oyun yazılımı projesidir. Oyunun ana karakteri bir kahve tanesidir. Oyunun arkaplanını bir merdiven teşkil etmektedir. Kahve tanesinin uykusu gelmiştir ve bu merdivenlerden aşağı inip yatağına ulaşıp uyumak istemektedir. Ancak oyuncu onu uyanık tutarak merdivenlerde bulunan harfleri toplamak suretiyle o bölüm için seçilmiş olan kelimeyi tamamlamak istemektedir. Bunu yaparken harfleri merdivenlerin sahanlıklarında bulunan kapılardan çıkacak düşmanlara kaptırmaması gerekmektedir.
+
+   \subsection{Proje Çıktıları}
+   Projenin 4 çıktısı mevcuttur. Bunlar,
+   \begin{itemize}
+      \item SPMP (Yazılım Proje Yönetim Planı) Belgesi
+      \item SRS (Yazılım Gereksinim Belirtimi) Belgesi
+      \item SDD (Yazılım Tasarım Tanımlama) Belgesi
+      \item STD (Yazılım Test Dökümanı/) Belgesi
+   \end{itemize}
+   olup, zaman çizelgesi için lütfen bölüm \ref{timetable}'e müracaat ediniz.
+
+
+   \section{PROJE ORGANİZASYONU}
+   \subsection{Yazılım Süreç Modeli}
+   Bu projede artımlı yazılım süreç modeli temel alınmıştır. Bu modelin temel alınmasında modelin, projenin test edilmesini kolay kılması, hataların her artımın kendi içinde tespit edilip erken bir şekilde onarılabilmesi ve artımların kendi içinde son ürünün birer numunesini teşkil etmesi etkili olmuştur. 
+
+   \subsection{Roller ve Sorumluluklar}
+   Bu proje dört kişi tarafından geliştirilmektedir. Takım üyeleri aşağıda listelenmiştir:
+   \begin{itemize}
+      \item Abdullah AKALIN
+      \item Bekir Aydın
+      \item Karim El Guermai
+      \item Muhammed Emre Emrah
+   \end{itemize}
+
+   Ayrıca üyelerin rolleri aşağıda tablo halinde verilmiştir:
+
+   \begin{center}
+      \begin{tabular}{||l r||}
+      \hline
+      Kişi & Görev \\[0.5ex]
+      \hline\hline
+      Abdullah AKALIN & Proje Yönetimi \\
+      \hline
+      Bekir Aydın & Yazılım Testi \\
+      \hline
+      Karim El Guermai & Yazılım Uygulama \\
+      \hline
+      Muhammed Emre Emrah & Dağıtım ve Reklam  \\
+      \hline
+      \end{tabular}
+   \end{center}
+
+   Tabloda belirtilen ana rollerin yanısıra her üyenin yan rolleri bulunmaktadır. Buna göre, her üye projenin kodlama kısmında aktif olarak rol alacak olup, her üye kendi ürettiği kodun testini yapacaktır. 
+
+   \subsection{Araçlar ve Teknikler}
+   Bu proje Java dili ile, \textit{libGDX} kütüphanesi kullanılarak geliştirilecektir. \textit{libGDX} platform bağımsız, açık kaynaklı bir Java oyun kütüphanesidir. Geniş kullanıcı kitlesine sahip olması ve aynı kodun çok küçük değişikliklerle yaygın mobil/masaüstü platformlara uyarlanabilmesi özelliğinden dolayı tercih edilmiştir\footnote{https://libgdx.badlogicgames.com/features.html}.
+
+   Projenin versiyon takibi için \textit{git} yazılımı tercih edilmiştir. Ayrıca grup çalışmasını kolaylaştırmak amacıyla proje için bir \textit{github repository} oluştırılmuştur.
+
+   \section{PROJE YÖNETİM PLANI}
+   \subsection{Görevler}
+   \subsubsection{Oyun Fikrinin Değerlendirilmesi}
+   \paragraph{Açıklama}
+   Bu görevde yapılacak oyunun hedefi ve aşamaları saptanacaktır.
+   \paragraph{Çıktılar ve Kilometre Taşları}
+   Bu görevin neticesinde projenin, kullanılacak modele uygun olarak artımlara bölünmesi hedeflenmektedir.
+   \paragraph{Gerekli Kaynaklar}
+   Bu görev için temel başvuru kaynağı internet ve ilgili makaleler olacaktır.
+   \paragraph{Bağımlılıklar ve Kısıtlar}
+   Üretilecek oyunun oyuncuların ilgisini cezbedici nitelikte olması gerekmektedir.
+   \paragraph{Riskler}
+   Oyunun gereğinden zor olması, tekdüze olması yahut çok kolay olması halinde kullanıcılar tarafından tercih edilmeme riski vardır.
+
+   \subsubsection{Kodlama}
+   \paragraph{Açıklama}
+   Bu görevde projenin kodlama işlemleri gerçekleştirilecektir.
+   \paragraph{Çıktılar ve Kilometre Taşları}
+   Bu görevin neticesinde oyun dağıtıma çıkmadan önceki son halini alacaktır. Artımlı yazılım modeline göre her bir artım için birer versiyon teşkil edecektir.
+   \paragraph{Gerekli Kaynaklar}
+   Bu görev tüm üyelerin özverili çalışmalarını gerektirmektedir. 
+   \paragraph{Bağımlılıklar ve Kısıtlar}
+   Görev için süre kısıtı mevcuttur.
+   \paragraph{Riskler}
+   Kodlama esnasında oluşabilecek hataların erken teşhis edilememesi durumunda kaynak kaybı yaşanacaktır.
+
+   \subsubsection{Test ve Dağıtım}
+   \paragraph{Açıklama}
+   Bu görevde proje, son kullanıcıya ulaşmaya hazır hale getirilecektir. Gerekli son testler yapılacak olup hataların tespiti halinde çözüm yolları araştırılacaktır.
+   \paragraph{Çıktılar ve Kilometre Taşları}
+   Bu görevin neticesinde proje dağıtıma çıkmaya hazır hale gelecektir.
+   \paragraph{Gerekli Kaynaklar}
+   Projenin Google Play Store üzerinden dağıtılması planlanmaktadır. Dolayısıyla bir Google Play hesabı gerekmektedir.
+   \paragraph{Bağımlılıklar ve Kısıtlar}
+   Projenin nihayetinde kullanıcıları cezbedici ve eğlendirici nitelikte olması gerekmektedir.
+   \paragraph{Riskler}
+   Proje, ilgili mecralarda gerekli etkiyi oluşturamaması halinde başarısızlıkla sonuçlanacaktır.
+
+   \subsection{Atamalar}
+   Her görevde her üyenin aktif olarak çalışması planlanmaktadır.
+
+   \subsection{Zaman Çizelgesi} \label{timetable}
+   \begin{center}
+      \begin{tabu} to 1.0\textwidth {| X[l] |  X[c] |  X[c] |}
+      \hline
+      Tarih & Belge & Amaç \\[0.5ex]
+      \hline\hline
+      24.03.2017 & SPMP & Yazılım alt sistemlerinin ve bunların teslim tarihinin belirtilmesi. \\
+      \hline
+      14.04.2017 & SRS & Tasarım ve test süreçlerine ışık tutacak gereksinim listesinin eksiksiz ve tutarlı biçimde ortaya konması. \\
+      \hline
+      05.05.2017 & SDD & Uygulama ve testlere ışık tutacak olan tasarım detaylarının ve süreç içerisinde alınan tasarım kararlarının belirtilmesi. \\
+      \hline
+      26.05.2017 & STD & Yazılım test sürecinin dokümantasyonunun sağlanması.  \\
+      \hline
+      \end{tabu}
+   \end{center}
+
+
+\end{document}
+
